@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+body{
+    background: linear-gradient(yellow,orange,green);
+    margin-top: 0 auto;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.tittle{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 7%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 45px;
+    justify-content: center;
+}
+.tittle span{
+    color: rgb(252, 6, 6);
+}
+.cr-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.carsoule-wapper{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display: block;
+    margin: 50px auto ;
+}
+.carsoul-item{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    padding: 25px 15px;
+    transition: all 0.5s ease-in-out
+}
+.arrow{
+    border: 2px solid black;
+    border-width:0 3px 3px 0 ;
+    display: inline-block;
+    padding: 10px;
+}
+.arrow-prev{
+    position: absolute;
+    top:50%;
+    left: 4%;
+    transform: translateY(-50%) rotate(135deg);
+}
+.arrow-next{
+    position: absolute;
+    top:50%;
+    right: 2%;
+    transform: translate(-50%) rotate(-45deg);
+}
+.item-1{
+    background: url(images/doge.jpg);
+    width: 110%;
+    height: 210%;
+    z-index:4;
+    opacity: 1;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item-2{
+    background: url(images/monkey.jpg);
+    width: 110%;
+    height: 210%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.item-3{
+    background: url(images/parrot.jpeg);
+    width: 110%;
+    height: 210%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.item-4{
+    background: url(images/animaljpeg.jpeg);
+    width: 110%;
+    height: 210%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+#item-1:target~ .item-1{
+    opacity:1;
+    z-index: 4;
+}
+#item-2:target~ .item-2{
+    opacity:1;
+    z-index: 5;
+}
+#item-3:target~ .item-3{
+    opacity:1;
+    z-index: 6;
+}
+
+#item-4:target~ .item-4{
+    opacity:1;
+    z-index: 7;
+}
